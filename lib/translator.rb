@@ -16,7 +16,7 @@ def load_library(file_path)
 end
 
 def get_japanese_emoticon(file_path, emoticon)
-  library
+  library = 
   return "Sorry, that emoticon was not found"
 end
 
