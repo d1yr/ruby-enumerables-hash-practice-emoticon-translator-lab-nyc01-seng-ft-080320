@@ -4,13 +4,15 @@ require 'pry'
 
 def load_library(file_path)
   emoticons = YAML.load_file('./lib/emoticons.yml')
-    table = {:english => {},:japanese => {}}
-emoticons.each do |meaning, translations|
-    table[:japanese][translations[1]] = meaning
-    table[:english][translations[0]] = translations[1] 
+    new_hash = {}
+
+  emoticons.each do |key,value|
+    new_hash[key] = {}
+    new_hash[key][:english] = value[0]
+    new_hash[key][:japanese] = value[1]
   end
-  table
-  #binding.pry
+
+  new_hash
 end
 
 def get_japanese_emoticon(file_path, emoticon)
