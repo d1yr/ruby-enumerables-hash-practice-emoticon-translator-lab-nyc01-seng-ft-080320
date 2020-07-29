@@ -4,6 +4,8 @@ require 'pry'
 
 def load_library(file_path)
   emoticons = YAML.load_file('./lib/emoticons.yml')
+def load_library(file_path)
+  emoticons = YAML.load_file(file_path)
 
   # Hash must use the => syntax to pass tests.
   # "get_meaning": {} will not pass the test suite.
