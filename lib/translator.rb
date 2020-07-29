@@ -9,8 +9,8 @@ emoticons.each do |meaning, translations|
     table[:japanese][translations[1]] = meaning
     table[:english][translations[0]] = translations[1] 
   end
-  table[:english]
-  table[:japanese]
+  table{:english}
+  table{:japanese}
   #binding.pry
 end
 
