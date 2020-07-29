@@ -6,6 +6,7 @@ def load_library(file_path)
   emoticons = YAML.load_file('./lib/emoticons.yml')
     table = {"Japanese" => {},"English" => {}}
 emoticons.each do |meaning, translations|
+  english = 
     table["English"][translations[1]] = meaning
     table["Japanese"][translations[0]] = translations[1] 
   end
