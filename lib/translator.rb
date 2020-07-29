@@ -24,12 +24,9 @@ def get_japanese_emoticon(file_path, emoticon)
 end
 
 
-def get_english_meaning(file_path, emoticon)
-  emoticons = load_library(file_path)
-  emoticons[:english].each do |japanese_emoticon, english_meaning|
-    if emoticon == japanese_emoticon
-      return english_meaning
-    end
-  end
+def get_english_meaning(file_path, meaning)
+  library = load_library(file_path)
+  meaning = library.keys.find do |key|
+    library[]
   return "Sorry, that emoticon was not found"
 end
