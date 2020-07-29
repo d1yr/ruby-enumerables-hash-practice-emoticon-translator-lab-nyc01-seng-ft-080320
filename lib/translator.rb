@@ -10,7 +10,7 @@ emoticons.each do |meaning, translations|
     table["blue"][translations[0]] => translations[1]
   end
   table
-  #binding.pry
+  binding.pry
 end
 
 def get_japanese_emoticon(file_path, emoticon)
